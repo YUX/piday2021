@@ -29,6 +29,8 @@ st.sidebar.write("""
 ##### Faculty of Science
 ##### XIAO Yu 18041907
 ##### 2021.3.1415926535……
+***
+[![GitHub badge](https://img.shields.io/github/stars/YUX/piday2021.svg?logo=github&style=social)](https://github.com/YUX/piday2021)
 """)
 page = PAGES[selection]
 page.app()

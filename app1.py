@@ -47,8 +47,8 @@ def app():
 
         html_doc = r.text
 
-        print(
-            float(re.findall(pattern="Search time was (.*?) second", string=html_doc)[0]))
+        # print(
+            # float(re.findall(pattern="Search time was (.*?) second", string=html_doc)[0]))
 
         rank = re.findall(
             pattern="appears at the ([0-9,]*?)(st|nd|rd|th| )", string=html_doc)[0][0]
@@ -67,8 +67,8 @@ def app():
         im = Image.open(img_path)
         draw = ImageDraw.Draw(im)
         w, h = draw.textsize(msg)
-        myFont = ImageFont.truetype("SimHei.ttf", 30, encoding="utf-8")
-        draw.textsize(msg, font=myFont)
+        # myFont = ImageFont.truetype("SimHei.ttf", 30, encoding="utf-8")
+        draw.textsize(msg)
         draw.text(((W-w)/2, (H-h)/2), msg, fill="black")
         st.image(im, caption='', use_column_width=True)
 
@@ -79,7 +79,7 @@ def app():
             if b:
                 pretty_number += f"<font color=\"gray\" size=\"5\">...{b}</font>"
             else:
-                pretty_number += f"<font color=\"gray\" size=\"5\">{b}</font>"
+                pretty_number += f"<font color=\"gray\" size=\"5\">3.{b}</font>"
             pretty_number += "".join(
                 [f"<span class=\"d{x}\"><font size=\"6\">{x}</font></span>" for x in str(number)])
             pretty_number += f"<font color=\"gray\" size=\"5\">{a}...</font>"
