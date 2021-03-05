@@ -6,7 +6,7 @@ import requests
 import re
 import time
 import random
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 
 
 
